@@ -1,0 +1,397 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif Khojki", serif;
+    
+}
+
+
+
+  
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;}
+
+/*NAV*/
+
+
+
+nav{
+    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 0 70px 0;
+    height: 80px;
+    
+
+}
+
+.nav-left {
+    flex: 1; /* Mantiene el espacio a la izquierda */
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+    margin-right: 30px;
+    gap: 50px;
+    z-index: 1;
+}
+
+.nav-background {
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    top: -120px;
+    left:-50px;
+    z-index: -1; /* Envía la imagen al fondo */
+    object-fit: contain; /* Evita distorsión */
+    
+}
+
+.nav-link{
+    font-size: 20px;
+    color: #000;
+}
+
+.nav-link.shop{
+    padding: 0 15px 5px 15px;
+    color:#fff;
+    background-color: #000;
+    border-radius: 8px;
+}
+
+
+
+
+.bolsa-img{
+    height: 40px;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-right: 30px;
+    gap: 50px;
+    z-index: 1; /* Asegura que los links estén sobre la imagen */
+}
+.logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    margin-top: 15px;
+    height: 110px;
+    z-index: 1;
+}
+
+/*MAIN INDEX*/
+.slogan-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%; 
+}
+
+.slogan-container > h1{
+    width: 50%;
+    font-size: 150px;
+    line-height: 1.2;
+}
+
+
+.cat{
+    height: 100px;
+    align-self: flex-end;
+  
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+    width: 30%;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+    border-radius: 18px;
+}
+
+.img-home{
+    border-radius: 10px;
+    height: 650px;
+}
+
+.product img:first-child{ /*IMG NEXT izquierda*/
+    rotate: 180deg;
+}
+
+.img-next{/*IMG NEXT derecha*/
+    width: 90px;
+    height: auto;
+}
+
+/*NOVEDADES ACCESO DIRECTO*/
+
+/* Contenedor principal del video */
+.video-container {
+    position: relative;
+    width: 70vw; 
+    max-width: 800px;
+    height: calc(70vw / 4.5); 
+    max-height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* Estilos del video */
+.video-novedades-temporada {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Capa de superposición (overlay) */
+.video-overlay {
+    position: absolute; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Contenedor del texto y el icono */
+.video-link {
+    display: flex;
+    align-items: center; /* Alinea icono y texto en la misma línea */
+    gap: 8px; /* Espacio entre el texto y el icono */
+    text-decoration: none;
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Estilos del texto */
+.video-text {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center; /* Asegura alineación con el icono */
+    line-height: 1; /* Asegura que el icono se alinee bien */
+}
+
+/* Estilos del icono */
+.icono {
+    font-size: 24px; /* Asegura que tenga tamaño visible */
+    color: white;
+    display: inline-flex; /* Hace que aparezca correctamente */
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+/*SHOP*/
+
+#shop h2{
+    font-size: 100px;
+}
+
+.explorar-todo{
+    color:#000;
+    font-size: 25px;
+}
+
+
+/*NOVEDADES DE TEMPORADA*/
+
+#novedades h2{
+    font-size: 100px;
+}
+
+#novedades img{
+    height: 3   50px;
+}
+
+/*ENCONTRANOS EN REDES*/
+
+#contacto h2{
+    font-size: 100px;
+}
+
+.iconos img{
+    height: 50px;
+}
+
+/*FOOTER*/
+.contactanos,.menu{
+    font-size: 20px;
+}
+
+.footer-link{
+    color:#000;
+}
+
+/*CATEGORIA FEMENINA Y MASCULINA*/
+
+/*destacado*/
+
+.destacado h2{
+    font-size: 50px;
+}
+
+.destacado img{
+    height: 350px;
+
+}
+
+/*REMERAS/BUZOS/PANTALONES/POLLERAS*/
+
+.titulo-categoria{
+    font-size: 150px;
+}
+
+.producto-especifico{
+    height: 400px;
+}
+
+.producto-precio{
+    color:#000;
+}
+
+
+
+/*--------PREGUNTAS FRECUENTES--------*/
+
+.no-scroll{
+    overflow: hidden;
+}
+
+.gato-preguntas-frecuentes{
+    height: 150px;
+    
+}
+
+
+.flex-container-preguntas-frecuentes {
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 115px auto 0; /* Centrado y margen superior */
+}
+
+/* Imagen de fondo (inferior derecha) */
+.flex-container-preguntas-frecuentes::after {
+    content: "";
+    position: absolute;
+    bottom: -15%;
+    right: 0;
+    left: 88%;
+    width: 700px;
+    height: 600px; 
+    background-image: url('../media/fondo2.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    opacity: 0.8;
+    z-index: -1; /* Envía la imagen al fondo */
+    rotate: -160deg;
+    
+}
+
+@media (max-width: 768px) { /*reduce la img fondo*/
+    .flex-container-preguntas-frecuentes::after {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+.h1-preguntas-frecuentes {
+    font-size: clamp(40px, 5vw, 70px);
+    flex: 1 1 auto; /* Permite que crezca y se reduzca según el espacio */
+    min-width: 200px; /* Ancho mínimo para evitar que sea demasiado pequeño */
+    white-space: nowrap; /* Evita saltos de línea no deseados */
+}
+
+
+    
+
+/* Estilos para el acordeón */
+
+.accordion {
+    width: 100%; 
+    max-width: 800px;
+    margin: 0 auto; 
+    flex-grow: 1;         /* El acordeón ocupa el resto del espacio */
+    
+}
+
+.accordion-item {
+    width: 100%;
+    
+}
+
+.accordion-button, 
+.accordion-collapse {
+    width: 100%;
+    
+}
+
+.accordion-body {
+    width: auto;
+    padding: 1rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: black !important;
+    color: white !important;
+    border-color: black !important;
+}
+
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25) !important;
+    border-color: black !important;
+}
+
+.accordion-button {
+    background-color: white;
+    color: black;
+    padding: 1.4rem;
+}
+
+.accordion-item {
+    border-color: black !important;
+}
+
+/*que el borde del acordeón abierto también sea negro */
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
