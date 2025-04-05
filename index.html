@@ -22,7 +22,7 @@
   <header>
     <nav class="navbar navbar-expand-xl custom-nav">
         <!-- Imagen de fondo -->
-        <img class="nav-background" src="./media/background.png" alt="background">
+        <img class="nav-background" src="./media/nav-background.png" alt="background">
         
         <!-- 1. Botón hamburguesa (siempre a la derecha) -->
         <button class="navbar-toggler ms-auto me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
@@ -57,7 +57,6 @@
     <main>
         <section class="slogan-container">
             <h1>For everyone, but not anyone</h1>
-            <!--<img class="background" src="media/background.png" alt="background">-->
             <img class="cat" src="media/cat.png" alt="Ilustración de un gato">
 
             <article class="product">
@@ -80,17 +79,15 @@
     </main>
    
     <aside class="video-container">
-        <div class="video-overlay">
-            <a href="#novedades" class="video-link">
+        <a href="#novedades" class="video-link">
+            <video class="video-novedades-temporada" muted autoplay loop>
+                <source src="media/novedades-background.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+            <div class="video-overlay">
                 <h2 class="video-text">Novedades de temporada</h2>
-                <ion-icon name="exit-outline" class="icono"></ion-icon>
-            </a>
-        </div>
-    
-        <video class="video-novedades-temporada" muted autoplay loop>
-            <source src="media/novedades-background.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-        </video>
+            </div>
+        </a>
     </aside>
 
     <section id="shop">
@@ -100,8 +97,7 @@
         <a href="pages/categoria-fem.html"><img src="media/img-ejemplo-categoria-2.jpg" alt="categoria femenina"></a>
         <a href="pages/categorias.html"><img src="media/todas-categorias.jpg" alt="todas las categorias"></a>
         <a href="pages/categorias.html"><h3 class="explorar-todo">Explorar todas las colecciones</h3></a>
-        <img class="background" src="media/background.png" alt="background">
-        <img class="background" src="media/background.png" alt="background">
+        
 
 
     </section>
