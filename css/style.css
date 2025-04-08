@@ -82,7 +82,7 @@ a {
       transform: none;
       order: 0;
       margin: 0 auto;
-      display: block !important; /* Siempre visible por defecto */
+      display: block !important;
   }
 
   /* Oculta el logo cuando el menú está abierto */
@@ -133,6 +133,14 @@ a {
   }
 }
 
+
+
+
+
+
+
+
+
 /* ------------------- INDEX MAIN ------------------- */
 
 .slogan-container{
@@ -179,7 +187,9 @@ a {
   height: auto;
 }
 
-/*NOVEDADES ACCESO DIRECTO*/
+
+
+/*-----------NOVEDADES ACCESO DIRECTO-----------*/
 
 /* Contenedor principal del video */
 .video-container {
@@ -246,19 +256,62 @@ a {
 
 
 
-/*SHOP*/
+/*-------------------SHOP-------------------*/ 
 
-#shop h2{
-  font-size: 100px;
+#shop h2{ /*text elegi tu estilo*/
+  font-size: 8rem;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.explorar-todo{
-  color:#000;
-  font-size: 25px;
+.grid-container{
+  
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: 2fr 1fr;
+  grid-template-areas: "category1 category2"
+                        "allCategories allCategories";
+  gap:20px;
+}
+
+.category1{
+        grid-area:category1;
+}
+
+.category2{
+    grid-area:category2;
+}
+
+.allCategories{
+    grid-area:allCategories;
+}
+
+.category1, .category2, .allCategories {
+  height: 100%; /* Ocupar toda la altura de la celda del grid */
+}
+
+/* Imágenes */
+.grid-container a img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.grid-container {
+  max-height: 600px;
+  grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+  
 }
 
 
-/*NOVEDADES DE TEMPORADA*/
+
+
+
+
+
+
+/*----------------NOVEDADES DE TEMPORADA---------------------*/ 
+
 
 #novedades h2{
   font-size: 100px;
@@ -268,52 +321,18 @@ a {
   height: 350px;
 }
 
-/*ENCONTRANOS EN REDES*/
 
-#contacto h2{
-  font-size: 100px;
-}
+
+
+
+/*------------ENCONTRANOS EN REDES-------------*/
+
 
 .iconos img{
   height: 50px;
 }
 
-/*FOOTER*/
-.contactanos,.menu{
-  font-size: 20px;
-}
-
-.footer-link{
-  color:#000;
-}
-
-/*CATEGORIA FEMENINA Y MASCULINA*/
-
-/*destacado*/
-
-.destacado h2{
-  font-size: 50px;
-}
-
-.destacado img{
-  height: 350px;
-
-}
-
-/*REMERAS/BUZOS/PANTALONES/POLLERAS*/
-
-.titulo-categoria{
-  font-size: 150px;
-}
-
-.producto-especifico{
-  height: 400px;
-}
-
-.producto-precio{
-  color:#000;
-}
-
+/*----------------FOOTER--------------------*/
 
 
 
@@ -369,3 +388,5 @@ a {
 .accordion-button:not(.collapsed)::after {
   filter: brightness(0) invert(1);
 }
+
+/*---------------------------------------------*/
