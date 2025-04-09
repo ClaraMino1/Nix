@@ -284,7 +284,7 @@ a {
 
 .grid-container{
   margin: 0 auto;
-  width: 80%;
+  width: 75%;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   grid-template-rows: 2fr 1fr;
@@ -382,17 +382,42 @@ a {
 
 
 
+/*----------------FOOTER--------------------*/
 
-
-
-/*------------ENCONTRANOS EN REDES-------------*/
-
-
-.iconos img{
-  height: 50px;
+footer{
+  margin-top: 200px;
 }
 
-/*----------------FOOTER--------------------*/
+
+.flex-container-footer{
+  display: flex;
+  justify-content: space-around;
+  background-color: #232222;
+  
+}
+
+.menu-footer,.redes-footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  height: 350px;
+  font-size: 1.4rem;
+  
+  
+}
+
+.subtitle-footer{
+  font-size: 1.9rem;
+  margin-bottom: 40px;
+}
+
+.redes-footer > ul > li > a > img{
+  height:30px;
+}
+
+
+
 
 
 
