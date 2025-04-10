@@ -194,7 +194,8 @@ a {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 20px;
-  margin-top: 2.3rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 
 /* Estilos del video */
@@ -227,12 +228,12 @@ a {
   background: rgba(0, 0, 0, 0.3);
 }
 
-/* Efecto hover para el overlay */
+
 .video-link:hover .video-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* Estilos del texto */
+
 .video-text {
   font-size: clamp(18px, 3vw, 24px);
   font-weight: bold;
@@ -516,6 +517,29 @@ footer{
   
 }
 
+.categoria-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.categoria-item img {
+  display: block;
+}
+
+.titulo-categoria {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 10px 0;
+  margin: 0;
+}
+
+/*---CARROUSEL DESTACADOS----*/
 
 .product-wrapper {
   position: relative;
@@ -591,3 +615,93 @@ footer{
 }
 
 
+/*-------------BUZOS--------------*/
+
+
+.flex-container-categorias-productos{
+  
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:40px;
+  margin-bottom: 4rem;
+}
+
+.flex-container-categorias-productos > a > img{
+  height: 400px;
+}
+
+.titulo-categorias-producto{
+  font-size: 8rem;
+  text-align: center;
+}
+
+.filtros{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  gap:50px;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.stock {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  font-size: 13px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.cart-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.price {
+  position: absolute;
+  bottom: 35px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  font-size: 13px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.name {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 13px;
+  
+}
