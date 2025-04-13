@@ -473,6 +473,12 @@ footer{
   filter: brightness(0) invert(1);
 }
 
+
+@media (min-width: 768px) {  /*para que el acordeon no sea tan ancho*/
+  .accordion {
+    max-width: 800px;
+  }
+}
 /*-------------CATEGORIAS--------------*/
 
 .title-categorias{
@@ -640,6 +646,7 @@ footer{
 
 .filtros{
   display:flex;
+  flex-flow: row wrap;
   width: 100%;
   justify-content: center;
   gap:50px;
@@ -703,8 +710,15 @@ footer{
   left: 10px;
   color: white;
   font-size: 13px;
-  
 }
+
+.inputs-categorias-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem; /* espacio entre checkbox y texto */
+}
+
 
 /*----------------PRODUCTO DETALLE----------------*/
 
@@ -720,8 +734,7 @@ footer{
 
 .contenido-superior > h1{ /*titulo nombre producto*/
   font-size: 4.4rem;
-  margin-top: 2%;
-  margin-bottom: 5%;
+  text-align: center;
 }
 
 .precio{
@@ -746,11 +759,11 @@ footer{
   display: flex;
   justify-content: space-evenly;
   flex-flow: row wrap;
-  height: 80vh; 
+  height: 75vh; 
 }
 
 .contenedor-padre-detalle-producto > img{
-  height: 80vh;
+  height: 75vh;
   border-radius: 10%;
 }
 
@@ -761,9 +774,11 @@ footer{
   justify-content: space-between;
   height: 100%;
   width: 30%;
-  padding: 2rem;
+  padding: 0.6rem 1rem;
   background-color: #f1f1f1;
   border-radius: 10%;
+  min-width: 430px;
+ 
 }
 
   
@@ -880,3 +895,9 @@ footer{
   background-color: #4a4a4a;
 }
 
+@media (max-width: 838px) {
+  .cuadro-detalles{
+    margin-top: 50px;
+  }
+
+}
