@@ -722,92 +722,78 @@ footer{
 
 /*----------------PRODUCTO DETALLE----------------*/
 
-.detalle{    /*talle, guia de talles, color*/
-  font-size: 1.2em;
+.contenedor-padre-detalle-producto {
+  width: 70vw;
+  margin: 0 auto 10%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "imagen cuadro";
+  gap: 100px;
+  justify-content: center;
 }
 
-.guia-talles{
-  text-decoration: underline;
-  align-self: center;
+
+.img-section {
+  grid-area: imagen;
+  justify-self: center;
+  width: 100%;
+  
+}
+
+.img-producto-detalle {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10%;
 }
 
 
-.contenido-superior > h1{ /*titulo nombre producto*/
-  font-size: 4.4rem;
+.section-detalles {
+  grid-area: cuadro;
+  background-color: rgb(183, 183, 183);
+  width: 100%;
+  justify-self: center;
+  padding: 20px;
+  height: auto;
+  display: flex;  /*hace que el contenido del cuadro quede en renglones*/
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10%;
+}
+
+.img-section,.section-detalles{
+  min-width: 400px;
+}
+
+
+
+.flex-talles-precio{  /*hace que el texto quede al lado de las opciones*/
+  display: flex; 
+  flex-flow: row wrap;
+  gap: 10px;
+}
+
+.section-detalles > h1{
+  font-size: 4rem;
   text-align: center;
 }
 
 .precio{
-  font-size: 1.8rem;
+  font-size: 2rem;
   background-color: #fff;
   padding: 10px 100px;
   border-radius: 20px;
 }
 
-.flex-talles-precio{ /*para que el texto quede al lado de los input radio*/
-  display: flex;
-  flex-flow: row wrap;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  gap: 1em;
-  align-items: center;
-}
 
-
-.contenedor-padre-detalle-producto{ /*separa la imagen del cuadro de detalles*/
-  display: flex;
-  justify-content: space-evenly;
-  flex-flow: row wrap;
-  height: 75vh; 
-}
-
-.contenedor-padre-detalle-producto > img{
-  height: 75vh;
-  border-radius: 10%;
-}
-
-
-.cuadro-detalles { /*column para que la informacion quede en renglones*/
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 30%;
-  padding: 0.6rem 1rem;
-  background-color: #f1f1f1;
-  border-radius: 10%;
-  min-width: 430px;
- 
-}
-
-  
-  
-
-.contenido-superior {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: center;
-}
-
-.botones {  /*pone los botones abajo de todo*/
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: center;
-  font-size: 1.5rem;
-  margin: 10px;
-}
-
-/*colores de botones*/
-
+/*---------botones----------*/
 .buy-button{
   border-radius: 28px;  /*sobre escribe buy-button del carrousel*/
   padding: 10px 50px;
 }
 
-.botones > a:nth-child(2){  /*segundo btn invertido*/
+.btn-2{ 
   color: #000;
   background-color: #fff;
   margin-top: 15px;
@@ -815,7 +801,7 @@ footer{
 }
 
 
-.botones > a:nth-child(2):hover{ 
+.btn-2:hover{ 
   background-color: #1e1e1e;
   color: #fff;
   margin-top: 20px;
@@ -823,7 +809,7 @@ footer{
   padding: 15px 60px;
 }
 
-.botones > a:first-child:hover{ 
+.btn-1:hover{ 
   color: #1e1e1e;
   background-color: #fff;
   border: 1px solid #000;
@@ -831,8 +817,12 @@ footer{
   padding: 13px 50px;
 }
 
-/*------------------------*/
 
+/*-----------------------------*/
+
+.guia-talles{   
+  text-decoration: underline;
+}
 
 .options {
   display: flex;
@@ -895,9 +885,74 @@ footer{
   background-color: #4a4a4a;
 }
 
-@media (max-width: 838px) {
-  .cuadro-detalles{
-    margin-top: 50px;
+
+@media (max-width: 907px) {   /*hace responsive la grilla*/
+  .contenedor-padre-detalle-producto {
+    width: 90vw;
+    padding: 0 5vw;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "imagen"
+      "cuadro";
+    gap: 30px;
   }
 
+  .img-section,
+  .section-detalles {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .precio{
+    font-size: 1rem;
+    background-color: #fff;
+    padding: 10px 70px;
+    border-radius: 20px;
+  }
+
+  .section-detalles > h1{
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+
+  .size-label {
+    width: 27px;
+    height: 27px;
+  }
+
+  .color-label {
+    width: 25px;
+    height: 25px;
+    
+  }
+  
 }
+
+@media (max-width: 1572px){
+  .precio{
+    font-size: 1.8rem;
+    background-color: #fff;
+    padding: 10px 70px;
+    border-radius: 20px;
+  }
+
+  .section-detalles > h1{
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+  }
+  
+
+  .size-label {
+    width: 30px;
+    height: 30px;
+  }
+
+  .color-label {
+    width: 30px;
+    height: 30px;
+    
+  }
+}
+
