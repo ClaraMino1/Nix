@@ -1,3 +1,6 @@
+
+
+ 
  /* Reset y estilos generales */
  * {
   padding: 0;
@@ -5,6 +8,7 @@
   box-sizing: border-box;
   font-family: "Noto Serif Khojki", serif;
 }
+
 
 ul {
   list-style: none;
@@ -722,35 +726,44 @@ footer{
 
 /*----------------PRODUCTO DETALLE----------------*/
 
+
+
 .contenedor-padre-detalle-producto {
-  width: 70vw;
+  width: 65vw;
+  height: 70vh;
   margin: 0 auto 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas: "imagen cuadro";
   gap: 100px;
   justify-content: center;
+  
 }
+
 
 
 .img-section {
   grid-area: imagen;
   justify-self: center;
   width: 100%;
-  
+  background-color: #fafafa;
+  box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  border-radius: 10%;
+  padding: 3% 1%;
 }
 
 .img-producto-detalle {
-  width: 100%;
+  width: 90%;
   height: auto;
   display: block;
   border-radius: 10%;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 
 .section-detalles {
   grid-area: cuadro;
-  background-color: rgb(183, 183, 183);
   width: 100%;
   justify-self: center;
   padding: 20px;
@@ -760,6 +773,10 @@ footer{
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10%;
+
+  background-color: #fafafa;
+  box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+
 }
 
 .img-section,.section-detalles{
@@ -781,16 +798,22 @@ footer{
 
 .precio{
   font-size: 2rem;
-  background-color: #fff;
+  background-color: #ebebeb8d;
   padding: 10px 100px;
   border-radius: 20px;
+}
+
+.detalle{
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 
 /*---------botones----------*/
 .buy-button{
   border-radius: 28px;  /*sobre escribe buy-button del carrousel*/
-  padding: 10px 50px;
+  padding: 10px 8%;
+  font-size: 1.5rem;
 }
 
 .btn-2{ 
@@ -798,15 +821,15 @@ footer{
   background-color: #fff;
   margin-top: 15px;
   border: 1px solid #000;
+  padding: 10px 13%;
 }
 
 
 .btn-2:hover{ 
   background-color: #1e1e1e;
   color: #fff;
-  margin-top: 20px;
   transition: all .3s ease;
-  padding: 15px 60px;
+  padding: 10px 20%;
 }
 
 .btn-1:hover{ 
@@ -814,19 +837,23 @@ footer{
   background-color: #fff;
   border: 1px solid #000;
   transition: all .3s ease;
-  padding: 13px 50px;
+  padding: 10px 15%;
 }
 
 
 /*-----------------------------*/
 
+
+
 .guia-talles{   
   text-decoration: underline;
-}
+  }
 
 .options {
   display: flex;
   gap: 10px;
+  align-items: center;
+  
 }
 
 
@@ -841,7 +868,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #000;
+  border: 1px solid #000;
   border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
@@ -858,7 +885,7 @@ footer{
 .color-label {
   width: 30px;
   height: 30px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 4px;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -888,6 +915,7 @@ footer{
 
 @media (max-width: 907px) {   /*hace responsive la grilla*/
   .contenedor-padre-detalle-producto {
+    
     width: 90vw;
     padding: 0 5vw;
     grid-template-columns: 1fr;
@@ -900,8 +928,9 @@ footer{
 
   .img-section,
   .section-detalles {
-    max-width: 500px;
+    min-width: auto; /* esto permite que se achique */
     width: 100%;
+    max-width: 500px;
   }
 
   .precio{
