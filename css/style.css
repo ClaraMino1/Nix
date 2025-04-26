@@ -1,6 +1,3 @@
-
-
- 
  /* Reset y estilos generales */
  * {
   padding: 0;
@@ -211,7 +208,7 @@ a {
 }
 
 /* Enlace que cubre todo el contenedor */
-.video-link {
+.video-link { /*saque la clase en html index*/
   position: relative;
   display: block;
   width: 100%;
@@ -238,7 +235,7 @@ a {
 }
 
 
-.video-text {
+.video-text { /*saque la clase en html index*/
   font-size: clamp(18px, 3vw, 24px);
   font-weight: bold;
   color: white;
@@ -387,30 +384,25 @@ a {
 
 /*----------------FOOTER--------------------*/
 
-footer{
-  margin-top: 200px;
-}
-
-
 .flex-container-footer{
   display: flex;
   justify-content: space-around;
-  background-color: #232222;
-  
+  align-items: center;
 }
 
 .menu-footer,.redes-footer{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   color: #fff;
-  height: 350px;
   font-size: 1.4rem;
-  
+  height: 400px;
   
 }
 
-.subtitle-footer{
+
+
+.subtitle-footer{ /*saque la clase del html index*/
   font-size: 1.9rem;
   margin-bottom: 40px;
 }
@@ -420,8 +412,10 @@ footer{
 }
 
 
-
-
+.wave-footer {
+  width: 100%;
+  height: 150px;
+}
 
 
 /*---------PREGUNTAS FRECUENTES---------*/
@@ -847,7 +841,7 @@ footer{
 
 .guia-talles{   
   text-decoration: underline;
-  }
+}
 
 .options {
   display: flex;

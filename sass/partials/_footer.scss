@@ -1,0 +1,47 @@
+#contacto{
+
+    .wave-footer {
+        width: 100%;
+        height: 150px;
+    }
+      
+
+    .flex-container-footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    
+    
+        .menu-footer,.redes-footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            color: #fff;
+            font-size: 1.4rem;
+            height: 400px;
+            
+        }
+    
+        .redes-footer{
+    
+            p{
+                font-size: 1.9rem;
+                margin-bottom: 40px;
+            }
+    
+            ul{
+                li{
+                    a{
+                        img{
+                            height:30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+

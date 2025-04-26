@@ -1,0 +1,283 @@
+@use "./partials/configuraciones";
+@use "./partials/nav";
+@use "./partials/footer";
+@use "./partials/preguntas_frecuentes";
+@use "./partials/categorias";
+@use "./partials/novedades_accdir";
+@use "./partials/producto_detalle";
+@use "./partials/mediaQueries";
+
+$black:#1e1e1e;
+
+// padre{
+//     hijo{
+
+//     }
+//     hijo{
+//         hijo2{
+
+//         }
+//     }
+// }
+
+
+
+/* ------------------- INDEX MAIN ------------------- */
+
+.slogan-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-evenly; 
+    width: 100%; 
+
+
+    h1{
+        width: 50%;
+        font-size: 150px;
+        line-height: 1.2;
+    }
+
+    img{
+        height: 100px;
+        align-self: flex-end;
+    }
+
+    .product{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fafafa;
+        width: 30%;
+        box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+        border-radius: 18px;
+
+        img{
+            border-radius: 10px;
+            height: 540px;
+        }
+      }
+}
+
+
+
+/*-------------------SHOP-------------------*/
+
+#shop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .img-1 {
+        position: absolute;
+        transform: rotate(-50deg);
+        top:-53%;
+        left: 5%;
+        z-index: -1;
+      }
+      .img-2 {
+        position: absolute;
+        right: 6%;
+        top:-37%;
+       
+        z-index: -1;
+      }
+    
+
+    h2{
+        font-size: 8rem;
+        text-align: center;
+        margin-bottom: 1em;
+        margin-top: 0.5em;
+    }
+
+    .grid-container{
+        margin: 0 auto;
+        width: 75%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 2fr 1fr;
+        grid-template-areas: "category1 category2"
+                              "allCategories allCategories";
+        gap:15px;
+        max-height: 600px;
+        grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
+
+
+        .category1{
+                grid-area:category1;
+                
+        }
+        
+        .category2{
+            grid-area:category2;
+        }
+        
+        .allCategories{
+            grid-area:allCategories;
+        }
+        
+        .category1, .category2, .allCategories {
+        height: 100%; /* Ocupar toda la altura de la celda del grid */
+        }
+
+        a{
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+            .img-category1{
+                border-radius: 136px 56px 151px 54px;
+              }
+              .img-category2{
+                border-radius:55px 137px 53px 151px;
+              }
+              .img-allCategories{
+                border-radius: 51px 134px 78px 168px;
+              }
+        }
+    }
+}
+
+/*----------------NOVEDADES DE TEMPORADA---------------------*/ 
+
+#novedades{
+    h2{
+        text-align: center;
+        font-size: 7rem;
+        margin-bottom: 5%;
+        margin-top: 5%;
+    }
+
+    .img-vertical {
+        width: auto;
+        height: 100vh;
+        object-fit: contain;
+        margin: 0 auto;
+        display: block;
+        background-color: #{$black};
+      }
+      .carousel-item {
+        text-align: center;  /* Centra la imagen horizontalmente */
+        
+        max-height: 600px;
+      }
+      
+      /*cambiar el color de las flechas del carrousel*/
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a0a0a0' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L4.09 1.41 6.67 4 4.09 6.59 5.5 8l4-4z' transform='rotate(180 4 4)'/%3E%3C/svg%3E");
+      }
+      
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23a0a0a0' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0L1.09 1.41 3.67 4 1.09 6.59 2.5 8l4-4z'/%3E%3C/svg%3E");
+      }
+      
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 40%; 
+      }
+}
+
+
+/*-------------BUZOS/REMERAS/PANTALONES/OTROS--------------*/
+
+
+.flex-container-categorias-productos{
+  
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:40px;
+  margin-bottom: 4rem;
+
+  .card {
+    position: relative;
+    width: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      img{
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+
+      .stock {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2px 8px;
+        font-size: 13px;
+        border-radius: 12px;
+        font-weight: bold;
+      }
+
+      .cart-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        border: none;
+        border-radius: 50%;
+        padding: 6px 8px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+
+      .price {
+        position: absolute;
+        bottom: 35px;
+        left: 10px;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 2px 8px;
+        font-size: 13px;
+        border-radius: 12px;
+        font-weight: bold;
+      }
+      
+      .name {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        color: white;
+        font-size: 13px;
+      }
+  }
+
+  a{
+    img{
+      height: 400px;
+
+    }
+  }
+}
+
+.titulo-categorias-producto{
+  font-size: 8rem;
+  text-align: center;
+}
+
+
+.filtros{
+  display:flex;
+  flex-flow: row wrap;
+  width: 100%;
+  justify-content: center;
+  gap:50px;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+
+      .inputs-categorias-flex {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem; /* espacio entre checkbox y texto */
+      }
+  
+}

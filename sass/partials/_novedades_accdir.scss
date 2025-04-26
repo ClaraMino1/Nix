@@ -1,0 +1,57 @@
+/*-----------NOVEDADES ACCESO DIRECTO-----------*/
+
+.video-container {
+    position: relative;
+    width: 70vw; 
+    max-width: 800px;
+    height: calc(70vw / 4.5); 
+    max-height: 200px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+
+    .video-novedades-temporada {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    a{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+
+            h2{
+                font-size: clamp(18px, 3vw, 24px);
+                font-weight: bold;
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+                padding: 10px 20px;
+                border-radius: 10px;
+                margin: 0;
+            }
+        }
+
+        
+    }
+
+    a:hover .video-overlay {
+        background: rgba(0, 0, 0, 0.5);
+    }
+  }

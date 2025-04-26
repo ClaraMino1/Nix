@@ -1,0 +1,54 @@
+/* ------------------- NAV ------------------- */
+
+$black:#1e1e1e;
+
+    .nav-link {
+        font-size: 20px;
+        color: #{$black};
+      }
+      
+      .nav-link.shop {
+        background-color: #000;
+        color: #fff;
+        padding: 5px 15px;
+        border-radius: 8px;
+      }
+      
+      .logo {
+        height: 110px;
+        margin-top: 15px;
+        rotate: -3deg;
+      }
+      
+      .bolsa-img {
+        height: 40px;
+      }
+      
+      .navbar {
+        padding: 20px 0;
+        position: relative;
+      }
+      
+      .navbar-nav {
+        gap: 40px;
+      }
+      
+      .nav-background {
+        position: absolute;
+        width: 400px;
+        height: 500px;
+        top: -120px;
+        left: -50px;
+        z-index: -1;
+        object-fit: contain;
+      }
+      
+      .custom-nav {
+        padding: 20px 0 70px 0;
+      }
+      
+      .logo-container {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }

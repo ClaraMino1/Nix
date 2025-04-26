@@ -1,0 +1,55 @@
+$black:#1e1e1e;
+
+
+
+/*---------PREGUNTAS FRECUENTES---------*/
+
+.gato-preguntas-frecuentes {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .h1-preguntas-frecuentes {
+    font-size: clamp(45px, 5vw, 75px);
+    font-weight: bold;
+  }
+  
+  /* Acordeón */
+  .accordion {
+    width: 100%;
+    max-width: 800px;
+  }
+  
+  .accordion-button,
+  .accordion-collapse {
+    width: 100%;
+  }
+  
+  .accordion-body {
+    padding: 1rem;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    background-color: #{$black} !important;
+    color: white !important;
+    border-color: #{$black} !important;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25) !important;
+    border-color: #{$black} !important;
+  }
+  
+  .accordion-button {
+    background-color: white;
+    color: #{$black};
+    padding: 1.4rem;
+  }
+  
+  .accordion-item {
+    border-color: #{$black} !important;
+  }
+  
+  .accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+  }

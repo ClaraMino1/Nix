@@ -1,0 +1,149 @@
+/*---NAV MQ-----*/  
+/* ------------------- Estilos para mobile nav ------------------- */
+@media (max-width: 1199.98px) {
+    /* Asegura que el botón hamburguesa esté a la derecha */
+    .navbar-toggler {
+        order: 1;
+        margin-left: auto;
+    }
+  
+    /* Posicionamiento del logo en mobile */
+    .logo-container {
+        position: static;
+        transform: none;
+        order: 0;
+        margin: 0 auto;
+        display: block !important;
+    }
+  
+    /* Oculta el logo cuando el menú está abierto */
+    .navbar-collapse.show ~ .logo-container,
+    .navbar-collapse.showing ~ .logo-container {
+        display: none !important;
+    }
+  
+    /*menú desplegable */
+    .navbar-collapse {
+        order: 2;
+        width: 100%;
+        margin-top: 15px;
+        background-color: rgba(192, 192, 192, 0.709); /* Fondo del menú */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  }
+  
+  /* Ajuste de margen para el logo en pantallas chicas */
+  @media (min-width: 380px) and (max-width: 640px) {
+    .logo-container {
+      margin-left: 40%;
+      margin-right: 0;
+      transform: none;
+      position: static;
+      order: 0;
+    }
+  }
+  
+  /* -------------------desktop nav ------------------- */
+  @media (min-width: 1200px) {
+    .navbar-nav {
+        margin-left: auto;
+    }
+  }
+  
+  /* -------------------tablets  nav------------------- */
+  /* Ajuste de margen para el logo en pantallas medianas */
+  @media (min-width: 641px) and (max-width: 1199.98px) {
+    .logo-container {
+      margin-left: 50%;
+      margin-right: 0;
+      transform: none;
+      position: static;
+      order: 0;
+    }
+  }
+
+/*---PREGUNTAS FRECUENTES MQ-----*/  
+  @media (min-width: 768px) {  /*para que el acordeon no sea tan ancho en preguntas frecuentes*/
+    .accordion {
+      max-width: 800px;
+    }
+  }
+
+
+/*---PRODUCTO DETALLE MQ-----*/  
+
+  @media (max-width: 907px) {   /*hace responsive la grilla*/
+    .contenedor-padre-detalle-producto {
+      
+      width: 90vw;
+      padding: 0 5vw;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "imagen"
+        "cuadro";
+      gap: 30px;
+    }
+  
+    .img-section,
+    .section-detalles {
+      min-width: auto; /* esto permite que se achique */
+      width: 100%;
+      max-width: 500px;
+    }
+  
+    .precio{
+      font-size: 1rem;
+      background-color: #fff;
+      padding: 10px 70px;
+      border-radius: 20px;
+    }
+  
+    .section-detalles > h1{
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    
+  
+    .size-label {
+      width: 27px;
+      height: 27px;
+    }
+  
+    .color-label {
+      width: 25px;
+      height: 25px;
+      
+    }
+    
+  }
+  
+  @media (max-width: 1572px){
+    .precio{
+      font-size: 1.8rem;
+      background-color: #fff;
+      padding: 10px 70px;
+      border-radius: 20px;
+    }
+  
+    .section-detalles > h1{
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+    }
+    
+  
+    .size-label {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .color-label {
+      width: 30px;
+      height: 30px;
+      
+    }
+  }
+  
+  
