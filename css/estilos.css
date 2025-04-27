@@ -6,6 +6,11 @@
   font-family: "Noto Serif Khojki", serif;
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -67,31 +72,37 @@ a {
   transform: translateX(-50%);
 }
 
-#contacto .wave-footer {
-  width: 100%;
-  height: 150px;
-}
-#contacto .flex-container-footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-#contacto .flex-container-footer .menu-footer, #contacto .flex-container-footer .redes-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
+#contacto {
+  height: 100%;
+  padding-bottom: 10%;
+  margin-top: 10%;
+  background-color: #1e1e1e;
   color: #fff;
-  font-size: 1.4rem;
-  height: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20%;
 }
-#contacto .flex-container-footer .redes-footer p {
-  font-size: 1.9rem;
-  margin-bottom: 40px;
+#contacto div {
+  margin-top: 80px;
 }
-#contacto .flex-container-footer .redes-footer ul li a img {
-  height: 30px;
+#contacto div ul p {
+  font-size: 30px;
+  text-decoration: underline;
+}
+#contacto div ul li {
+  font-size: 20px;
+}
+#contacto div ul li img {
+  height: 25px;
 }
 
+@media (max-width: 630px) {
+  #contacto {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*---------PREGUNTAS FRECUENTES---------*/
 .gato-preguntas-frecuentes {
   height: auto;
@@ -146,15 +157,17 @@ a {
 /*-----------NOVEDADES ACCESO DIRECTO-----------*/
 .video-container {
   position: relative;
-  width: 70vw;
-  max-width: 800px;
-  height: 15.5555555556vw;
-  max-height: 200px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 20px;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  min-width: 70vw;
+  max-width: 80vh;
+  min-height: 100px;
+  max-height: 200px;
+  width: 70vw;
+  height: 15.5555555556vw;
 }
 .video-container .video-novedades-temporada {
   width: 100%;
@@ -181,6 +194,7 @@ a {
   background: rgba(0, 0, 0, 0.3);
 }
 .video-container a .video-overlay h2 {
+  text-align: center;
   font-size: clamp(18px, 3vw, 24px);
   font-weight: bold;
   color: white;
@@ -610,10 +624,22 @@ a {
   width: 30%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 18px;
+  max-height: 550px;
+}
+.slogan-container .product .img-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .slogan-container .product img {
-  border-radius: 10px;
-  height: 540px;
+  margin: 0 auto;
+  max-height: 90%;
+  height: auto;
+  width: 80%;
+  object-fit: contain;
 }
 
 /*-------------------SHOP-------------------*/
@@ -681,6 +707,7 @@ a {
 
 /*----------------NOVEDADES DE TEMPORADA---------------------*/
 #novedades {
+  margin: 0 30px;
   /*cambiar el color de las flechas del carrousel*/
 }
 #novedades h2 {
@@ -691,8 +718,8 @@ a {
 }
 #novedades .img-vertical {
   width: auto;
-  height: 100vh;
-  object-fit: contain;
+  height: auto;
+  object-fit: cover;
   margin: 0 auto;
   display: block;
   background-color: #1e1e1e;
@@ -797,6 +824,141 @@ a {
   flex-direction: row;
   align-items: center;
   gap: 0.5rem; /* espacio entre checkbox y texto */
+}
+
+/* ----------- INDEX MAIN MQ----------- */
+@media (max-width: 1140px) {
+  .slogan-container .product {
+    height: 450px;
+  }
+  .slogan-container h1 {
+    font-size: 120px;
+  }
+  #shop h2 {
+    font-size: 110px;
+  }
+  #novedades h2 {
+    font-size: 110px;
+  }
+}
+@media (max-width: 1135px) {
+  .slogan-container .product {
+    height: 450px;
+  }
+  .slogan-container h1 {
+    font-size: 110px;
+  }
+  #shop h2 {
+    font-size: 100px;
+  }
+  #shop #novedades h2 {
+    font-size: 100px;
+  }
+}
+@media (max-width: 930px) { /*pasa la foto home a flex columna y con detalle*/
+  .slogan-container {
+    flex-direction: column;
+  }
+  .slogan-container img { /*img gato*/
+    margin-right: 50px;
+  }
+  .slogan-container h1 {
+    font-size: 140px;
+    margin-left: 50px;
+    width: 100vw !important;
+  }
+  .slogan-container .product {
+    min-width: 90%;
+    margin: 0 auto;
+  }
+  #shop h2 {
+    font-size: 90px;
+  }
+  #novedades h2 {
+    font-size: 90px;
+  }
+}
+/*----------para adaptar for everyone but not...---------*/
+@media (max-width: 783px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 110px;
+    margin-left: 50px;
+  }
+  #shop h2 {
+    font-size: 80px;
+  }
+  #novedades h2 {
+    font-size: 80px;
+  }
+}
+@media (max-width: 596px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 100px;
+  }
+  #shop h2 {
+    font-size: 70px;
+  }
+  #novedades h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 550px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 85px;
+  }
+  #shop h2 {
+    font-size: 60px;
+  }
+  #novedades h2 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 480px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 85px;
+  }
+  #shop h2 {
+    font-size: 85px;
+  }
+  #novedades h2 {
+    font-size: 85px;
+  }
+}
+@media (max-width: 468px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 70px;
+  }
+  #shop h2 {
+    font-size: 70px;
+  }
+  #novedades h2 {
+    font-size: 70px;
+  }
+}
+@media (max-width: 392px) {
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    max-width: 100%;
+    font-size: 60px;
+  }
+  #shop h2 {
+    font-size: 60px;
+  }
+  #novedades h2 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 300px) {
+  .slogan-container {
+    margin-top: 0;
+  }
+  .slogan-container h1 { /*----------para adaptar for everyone but not...---------*/
+    margin: 5px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -6,7 +6,8 @@
         order: 1;
         margin-left: auto;
     }
-  
+
+    
     /* Posicionamiento del logo en mobile */
     .logo-container {
         position: static;
@@ -63,6 +64,8 @@
       order: 0;
     }
   }
+
+  
 
 /*---PREGUNTAS FRECUENTES MQ-----*/  
   @media (min-width: 768px) {  /*para que el acordeon no sea tan ancho en preguntas frecuentes*/

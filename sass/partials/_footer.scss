@@ -1,47 +1,41 @@
+$black:#1e1e1e;
+
 #contacto{
+    height: 100%;
+    padding-bottom: 10%;
+    margin-top: 10%;
+    background-color: #{$black};
+    color: #fff;
 
-    .wave-footer {
-        width: 100%;
-        height: 150px;
-    }
-      
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20%;
+    
 
-    .flex-container-footer{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    
-    
-        .menu-footer,.redes-footer{
-            display: flex;
-            flex-direction: column;
-            justify-content: end;
-            color: #fff;
-            font-size: 1.4rem;
-            height: 400px;
-            
-        }
-    
-        .redes-footer{
-    
+    div{
+        margin-top: 80px;
+
+        ul{
             p{
-                font-size: 1.9rem;
-                margin-bottom: 40px;
+                font-size: 30px;
+                text-decoration: underline;
             }
-    
-            ul{
-                li{
-                    a{
-                        img{
-                            height:30px;
-                        }
-                    }
+            li{
+                font-size: 20px;
+
+                img{
+                    height: 25px;
                 }
             }
         }
     }
-
 }
 
 
-
+@media (max-width:630px){
+    #contacto{
+        flex-direction: column;
+        align-items: center;
+    }
+}

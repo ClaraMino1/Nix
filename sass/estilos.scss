@@ -35,6 +35,7 @@ $black:#1e1e1e;
         width: 50%;
         font-size: 150px;
         line-height: 1.2;
+        
     }
 
     img{
@@ -50,11 +51,25 @@ $black:#1e1e1e;
         width: 30%;
         box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
         border-radius: 18px;
+        max-height: 550px;
 
-        img{
-            border-radius: 10px;
-            height: 540px;
+        .img-container{
+                display: flex;
+                flex-direction: column;
+                justify-content:  center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
         }
+
+            img{
+                margin: 0 auto;
+                max-height:90%;
+                height: auto;
+                width: 80%;
+                object-fit: contain;
+
+            }
       }
 }
 
@@ -142,6 +157,7 @@ $black:#1e1e1e;
 /*----------------NOVEDADES DE TEMPORADA---------------------*/ 
 
 #novedades{
+  margin: 0 30px;
     h2{
         text-align: center;
         font-size: 7rem;
@@ -151,8 +167,8 @@ $black:#1e1e1e;
 
     .img-vertical {
         width: auto;
-        height: 100vh;
-        object-fit: contain;
+        height: auto;
+        object-fit: cover;
         margin: 0 auto;
         display: block;
         background-color: #{$black};
@@ -281,3 +297,229 @@ $black:#1e1e1e;
       }
   
 }
+
+
+/* ----------- INDEX MAIN MQ----------- */
+
+@media (max-width:1140px){
+
+  .slogan-container{
+
+    .product{
+      height: 450px;
+    }
+
+    h1{
+      font-size: 120px;
+    }
+  }
+
+  #shop{
+    h2{
+      font-size: 110px;
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 110px;
+    }
+  }
+
+}
+
+@media (max-width:1135px){
+
+  .slogan-container{
+
+    .product{
+      height: 450px;
+    }
+
+    h1{
+      font-size: 110px;
+    }
+  } 
+  #shop{
+    h2{
+      font-size: 100px;
+    }
+    #novedades{
+      h2{
+        font-size: 100px;
+      }
+    }
+  }
+}
+
+@media (max-width:930px){ /*pasa la foto home a flex columna y con detalle*/
+
+  .slogan-container{
+    flex-direction: column;
+
+        img{/*img gato*/
+          margin-right: 50px;
+        }
+
+        h1{
+          font-size: 140px;
+          margin-left: 50px;
+          width: 100vw !important;
+          
+        }
+
+        .product{
+          min-width: 90%;
+          margin: 0 auto;
+        } 
+  }
+  #shop{
+    h2{
+      font-size: 90px;
+
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 90px;
+    }
+  }
+}
+
+/*----------para adaptar for everyone but not...---------*/
+
+@media (max-width: 783px){ 
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        
+        max-width: 100%;
+        font-size: 110px;
+        margin-left: 50px;
+      }
+  }
+
+  #shop{
+    h2{
+      font-size: 80px;
+
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 80px;
+    }
+  }
+}
+
+@media (max-width: 596px){
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        max-width: 100%;
+        font-size: 100px;
+      }
+  }
+  #shop{
+    h2{
+      font-size: 70px;
+
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 70px;
+    }
+  }
+}
+
+@media (max-width: 550px){
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        max-width: 100%;
+        font-size: 85px;
+      }
+  }
+  #shop{
+    h2{
+      font-size: 60px;
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        max-width: 100%;
+        font-size: 85px;
+      }
+  }
+  #shop{
+    h2{
+      font-size: 85px;
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 85px;
+    }
+  }
+}
+
+@media (max-width: 468px){
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        max-width: 100%;
+        font-size: 70px;
+      }
+  }
+  #shop{
+    h2{
+      font-size: 70px;
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 70px;
+    }
+  }
+}
+
+@media (max-width: 392px){
+  .slogan-container{
+
+      h1{/*----------para adaptar for everyone but not...---------*/
+        max-width: 100%;
+        font-size: 60px;
+      }
+  }
+  #shop{
+    h2{
+      font-size: 60px;
+    }
+  }
+  #novedades{
+    h2{
+      font-size: 60px;
+    }
+  }
+}
+
+@media (min-width:300px){
+  .slogan-container{
+    margin-top: 0;
+
+    h1{/*----------para adaptar for everyone but not...---------*/
+      margin: 5px;
+    }
+  }
+}
+
+

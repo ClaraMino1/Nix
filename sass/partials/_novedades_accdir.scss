@@ -2,15 +2,18 @@
 
 .video-container {
     position: relative;
-    width: 70vw; 
-    max-width: 800px;
-    height: calc(70vw / 4.5); 
-    max-height: 200px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
     margin-top: 5rem;
     margin-bottom: 5rem;
+
+    min-width: 70vw;
+    max-width: 80vh;
+    min-height: 100px;
+    max-height: 200px;
+    width: 70vw;
+    height: calc(70vw / 4.5); 
 
     .video-novedades-temporada {
         width: 100%;
@@ -38,6 +41,7 @@
             background: rgba(0, 0, 0, 0.3);
 
             h2{
+                text-align: center;
                 font-size: clamp(18px, 3vw, 24px);
                 font-weight: bold;
                 color: white;
