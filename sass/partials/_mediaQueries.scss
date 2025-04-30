@@ -77,6 +77,8 @@
 
 
 /*---PRODUCTO DETALLE MQ-----*/  
+ 
+
 
   @media (max-width: 907px) {   /*hace responsive la grilla*/
     .contenedor-padre-detalle-producto {
@@ -86,15 +88,13 @@
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
       grid-template-areas:
-        "imagen"
-        "cuadro";
+        "cuadro"
+        "imagen";
       gap: 30px;
     }
   
     .img-section,
     .section-detalles {
-      min-width: auto; /* esto permite que se achique */
-      width: 100%;
       max-width: 500px;
     }
   

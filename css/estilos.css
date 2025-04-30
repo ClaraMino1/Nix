@@ -309,33 +309,37 @@ a {
   border-radius: 8px;
 }
 
-/*para que las flechas queden fuera del slider*/
-.carousel-control-prev,
-.carousel-control-next {
-  width: auto;
-  top: 50%;
+#multiCarousel .carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.5 0L4.09 1.41 6.67 4 4.09 6.59 5.5 8l4-4z' transform='rotate(180 4 4)'/%3E%3C/svg%3E");
+}
+
+#multiCarousel .carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.5 0L1.09 1.41 3.67 4 1.09 6.59 2.5 8l4-4z'/%3E%3C/svg%3E");
+}
+
+/* Ubicar las flechas fuera del slider */
+#multiCarousel .carousel-control-prev,
+#multiCarousel .carousel-control-next {
+  width: auto; /* no ocupan todo el lateral */
+  top: 50%; /* centrar verticalmente */
   transform: translateY(-50%);
-  background: none;
-  border: none;
+  z-index: 10;
 }
 
-.carousel-control-prev {
-  left: -60px;
+/* Flecha “anterior” izquierda */
+#multiCarousel .carousel-control-prev {
+  left: -50px; /* 50px fuera del borde izquierdo */
 }
 
-.carousel-control-next {
-  right: -60px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 2rem 2rem;
+/* Flecha “siguiente” derecha */
+#multiCarousel .carousel-control-next {
+  right: -50px; /* 50px fuera del borde derecho */
 }
 
 /*----------------PRODUCTO DETALLE----------------*/
 .contenedor-padre-detalle-producto {
-  width: 65vw;
-  height: 70vh;
+  width: 65%;
+  height: 70%;
   margin: 0 auto 10%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -346,7 +350,7 @@ a {
 .contenedor-padre-detalle-producto .img-section {
   grid-area: imagen;
   justify-self: center;
-  width: 100%;
+  width: 10 0%;
   background-color: #fafafa;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   border-radius: 10%;
@@ -371,6 +375,7 @@ a {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 10%;
+  gap: 20px;
   background-color: #fafafa;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   /*---------botones----------*/
@@ -553,13 +558,11 @@ a {
     padding: 0 5vw;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
-    grid-template-areas: "imagen" "cuadro";
+    grid-template-areas: "cuadro" "imagen";
     gap: 30px;
   }
   .img-section,
   .section-detalles {
-    min-width: auto; /* esto permite que se achique */
-    width: 100%;
     max-width: 500px;
   }
   .precio {
@@ -648,7 +651,7 @@ a {
     font-size: 60px !important;
   }
 }
-.flex-container-categorias-productos .card .price, .flex-container-categorias-productos .card .stock {
+.flex-container-categorias-productos .card .price, .flex-container-categorias-productos .card .stock { /*extend*/
   position: absolute;
   background: rgba(255, 255, 255, 0.9);
   padding: 2px 8px;
