@@ -9,16 +9,16 @@
 
 $black:#1e1e1e;
 
-// padre{
-//     hijo{
 
-//     }
-//     hijo{
-//         hijo2{
 
-//         }
-//     }
-// }
+%price-stock {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  font-size: 13px;
+  border-radius: 12px;
+  font-weight: bold;
+}
 
 
 
@@ -223,14 +223,9 @@ $black:#1e1e1e;
       }
 
       .stock {
-        position: absolute;
+        @extend %price-stock;
         top: 10px;
         left: 10px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 2px 8px;
-        font-size: 13px;
-        border-radius: 12px;
-        font-weight: bold;
       }
 
       .cart-btn {
@@ -246,14 +241,10 @@ $black:#1e1e1e;
       }
 
       .price {
-        position: absolute;
+        @extend %price-stock;
         bottom: 35px;
         left: 10px;
-        background: rgba(255, 255, 255, 0.9);
-        padding: 2px 8px;
-        font-size: 13px;
-        border-radius: 12px;
-        font-weight: bold;
+        
       }
       
       .name {

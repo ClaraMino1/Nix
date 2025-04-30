@@ -648,6 +648,15 @@ a {
     font-size: 60px !important;
   }
 }
+.flex-container-categorias-productos .card .price, .flex-container-categorias-productos .card .stock {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2px 8px;
+  font-size: 13px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
 /* ------------------- INDEX MAIN ------------------- */
 .slogan-container {
   margin-top: 40px;
@@ -811,14 +820,8 @@ a {
   border-radius: 15px;
 }
 .flex-container-categorias-productos .card .stock {
-  position: absolute;
   top: 10px;
   left: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2px 8px;
-  font-size: 13px;
-  border-radius: 12px;
-  font-weight: bold;
 }
 .flex-container-categorias-productos .card .cart-btn {
   position: absolute;
@@ -832,14 +835,8 @@ a {
   font-size: 16px;
 }
 .flex-container-categorias-productos .card .price {
-  position: absolute;
   bottom: 35px;
   left: 10px;
-  background: rgba(255, 255, 255, 0.9);
-  padding: 2px 8px;
-  font-size: 13px;
-  border-radius: 12px;
-  font-weight: bold;
 }
 .flex-container-categorias-productos .card .name {
   position: absolute;
