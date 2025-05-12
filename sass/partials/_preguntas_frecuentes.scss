@@ -12,7 +12,8 @@ $black:#1e1e1e;
   .h1-preguntas-frecuentes {
     font-size: clamp(45px, 5vw, 75px);
     font-weight: bold;
-  }
+    text-align: center;
+    }
   
   /* Acordeón */
   .accordion {
@@ -31,7 +32,7 @@ $black:#1e1e1e;
   
   .accordion-button:not(.collapsed) {
     background-color: #{$black} !important;
-    color: white !important;
+    color: rgb(255, 255, 255) !important;
     border-color: #{$black} !important;
   }
   
@@ -41,7 +42,7 @@ $black:#1e1e1e;
   }
   
   .accordion-button {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     color: #{$black};
     padding: 1.4rem;
   }
