@@ -72,7 +72,7 @@ $black: #1e1e1e;
             left: 0;
             width: 100%;
             text-align: center;
-            color: white;
+            color: #fff;
             font-size: 1.5rem;
             background: rgba(0, 0, 0, 0.6);
             padding: 10px 0;
@@ -128,6 +128,13 @@ $black: #1e1e1e;
             margin-top: 0.5rem;
             text-decoration: none;
             border-radius: 8px; 
+        }
+
+        .buy-button:hover {
+            background-color:#fff;
+            color: #{$black};
+            padding: 0.5rem 1.6rem;
+            transition: all 0.3s ease;
         }
     }
 }

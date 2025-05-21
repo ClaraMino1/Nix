@@ -118,11 +118,12 @@ $black:#1e1e1e;
         grid-template-rows: minmax(0, 2fr) minmax(0, 1fr);
 
 
+
         .category1{
                 grid-area:category1;
                 
         }
-        
+
         .category2{
             grid-area:category2;
         }
@@ -136,14 +137,21 @@ $black:#1e1e1e;
         }
 
         a{
+          font-size: 2em;
+          text-align: center;
+          
+          
+
             img{
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
             }
+            
             .img-category1{
                 border-radius: 136px 56px 151px 54px;
               }
+          
               .img-category2{
                 border-radius:55px 137px 53px 151px;
               }
@@ -175,8 +183,13 @@ $black:#1e1e1e;
       }
       .carousel-item {
         text-align: center;  /* Centra la imagen horizontalmente */
-        
         max-height: 600px;
+
+          img{
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+          }
       }
       
       /*cambiar el color de las flechas del carrousel*/
